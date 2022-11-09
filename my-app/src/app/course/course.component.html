@@ -1,0 +1,6 @@
+
+<h2>{{ course.Title }}</h2>
+<br><br>
+<label>{{ course.Description }}</label>
+<input type="button" value="Edit" (click)="EditCourse();" />
+<input type="button" value="Delete"  (click)="DeleteCourse(course.Id);" />
