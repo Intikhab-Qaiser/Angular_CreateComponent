@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Course } from 'src/@typings/Course';
 
 @Component({
   selector: 'app-course',
@@ -7,20 +8,23 @@ import { Component, Input, OnInit, Output } from '@angular/core';
 })
 export class CourseComponent implements OnInit {
 
-  @Input() course: ICourse;
-  @Output() courseId: number;
+  @Input()
+  course: Course;
+
+  @Output()
+  delete: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() { }
-
-  ngOnInit(): void {
-    console.log('Course ngOnInit')
-  }
 
   ngOnChanges(): void{
     console.log('Course ngOnChanges')
   }
 
-  ngDoCheck(): void{
+  ngOnInit(): void {
+    console.log('Course ngOnInit')
+  }
+
+  ngDoCheck(){
     console.log('Course ngDoCheck')
   }
 
@@ -44,12 +48,12 @@ export class CourseComponent implements OnInit {
     console.log('Course ngOnDestroy')
   }
 
-  EditCourse(){
+  Edit(){
 
   }
 
-  DeleteCourse(courseId: number){
-    console.log(courseId);
+  Delete(){
+    this.delete.emit(this.course.Id);
   }
 
 }

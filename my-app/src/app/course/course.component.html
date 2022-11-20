@@ -1,6 +1,12 @@
+<div class="courseDiv">
+  <h2 class="courseTitle">{{ course.Title }}</h2>
+  <label class="courseDescription" id="description">{{ course.Description }}</label>
+  <br><br>
+  <label class="courseDuration" id="duration">{{ course.Duration }}</label>
 
-<h2>{{ course.Title }}</h2>
-<br><br>
-<label>{{ course.Description }}</label>
-<input type="button" value="Edit" (click)="EditCourse();" />
-<input type="button" value="Delete"  (click)="DeleteCourse(course.Id);" />
+  <label id="creation">{{ course.CreationDate }}</label>
+
+  <br/>
+  <input class="btn"  id="editbutton" type="button" value="Edit" (click)="Edit();" />
+  <input class="btn" id="deletebutton" type="button" value="Delete"  (click)="Delete();" />
+</div>

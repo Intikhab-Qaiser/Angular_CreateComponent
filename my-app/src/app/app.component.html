@@ -1,13 +1,11 @@
+<body>
 <app-header> </app-header>
 <app-breadcrumbs></app-breadcrumbs>
 <app-search></app-search>
 <br><br>
 <app-addbutton></app-addbutton>
-
-<div *ngFor="let item of courses">
-  <app-course [course]=item></app-course>
-</div>
+<app-courselist></app-courselist>
 <input type="button" value="Load More" (click)="LoadMore();">
 <app-footer></app-footer>
-
+</body>
 
