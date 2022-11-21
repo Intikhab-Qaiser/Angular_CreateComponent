@@ -46,4 +46,13 @@ describe('CourseComponent', () => {
     expect(div.nativeElement.outerText).toContain("100");
   });
 
+  it('should emit on click', () => {
+    spyOn(component.delete, 'emit');
+    let button = fixture.nativeElement.querySelector('#deletebutton');//querySelector('button').query(By.css("#deletebutton"));
+    console.log(button);
+    button.dispatchEvent(new Event('click'));
+
+    expect(component.delete.emit).toHaveBeenCalledWith(1);
+ });
+
 });

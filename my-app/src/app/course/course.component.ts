@@ -1,5 +1,7 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, NgModule, OnInit, Output } from '@angular/core';
 import { Course } from 'src/@typings/Course';
+
+
 
 @Component({
   selector: 'app-course',
@@ -22,10 +24,6 @@ export class CourseComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('Course ngOnInit')
-  }
-
-  ngDoCheck(){
-    console.log('Course ngDoCheck')
   }
 
   ngAfterContentInit(): void{

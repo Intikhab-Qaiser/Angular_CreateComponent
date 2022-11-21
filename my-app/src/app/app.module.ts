@@ -18,11 +18,11 @@ import { CourselistComponent } from './courselist/courselist.component';
     HeaderComponent,
     FooterComponent,
     LogoComponent,
-    CourseComponent,
     SearchComponent,
     BreadcrumbsComponent,
     AddbuttonComponent,
-    CourselistComponent
+    CourselistComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,
