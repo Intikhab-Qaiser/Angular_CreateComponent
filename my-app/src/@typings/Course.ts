@@ -6,4 +6,5 @@ export interface Course {
   Description: string;
   AuthorFirstName: string;
   AuthorSecondName: string;
+  TopRated: boolean;
 }

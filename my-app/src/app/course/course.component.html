@@ -1,5 +1,7 @@
-<div class="courseDiv">
-  <h2 class="courseTitle">{{ course.Title }}</h2>
+<div [ngClass]="{courseDiv: !course.TopRated, courseDivTopRated: course.TopRated}"
+appCourseHighlight courseCreationDate="{{course.CreationDate}}">
+    <h2 class="courseTitle">{{ course.Title }}</h2>
+    <img *ngIf="course.TopRated" src="../../assets/starimage.jpg">
   <label class="courseDescription" id="description">{{ course.Description }}</label>
   <br><br>
   <label class="courseDuration" id="duration">{{ course.Duration }}</label>

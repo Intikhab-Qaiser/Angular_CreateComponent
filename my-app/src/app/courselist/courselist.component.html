@@ -1,3 +1,9 @@
 <div *ngFor="let item of courses; trackBy: identify">
   <app-course [course]= item (delete)="DeleteCourse($event)"></app-course>
 </div>
+
+<div *ngIf="courses.length===0">
+  <br><br>
+  <span>No courses to show</span>
+  <br><br>
+</div>

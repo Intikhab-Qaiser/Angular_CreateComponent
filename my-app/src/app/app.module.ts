@@ -11,6 +11,7 @@ import { SearchComponent } from './search/search.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { AddbuttonComponent } from './addbutton/addbutton.component';
 import { CourselistComponent } from './courselist/courselist.component';
+import { HighlightDirective } from './appHighlight.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CourselistComponent } from './courselist/courselist.component';
     BreadcrumbsComponent,
     AddbuttonComponent,
     CourselistComponent,
-    CourseComponent
+    CourseComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

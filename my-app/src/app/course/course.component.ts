@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, NgModule, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, NgModule, OnInit, Output, Directive } from '@angular/core';
 import { Course } from 'src/@typings/Course';
 
 
