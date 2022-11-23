@@ -1,14 +1,14 @@
 <div [ngClass]="{courseDiv: !course.TopRated, courseDivTopRated: course.TopRated}"
 appCourseHighlight courseCreationDate="{{course.CreationDate}}">
-    <h2 class="courseTitle">{{ course.Title }}</h2>
+    <h2 class="courseTitle">{{ course.Title | uppercase }}</h2>
     <img *ngIf="course.TopRated" src="../../assets/starimage.jpg">
   <label class="courseDescription" id="description">{{ course.Description }}</label>
   <br><br>
   <label class="courseDuration" id="duration">{{ course.Duration }}</label>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <label id="creation">{{ course.CreationDate | date: 'd MMM y' }}</label>
 
-  <label id="creation">{{ course.CreationDate }}</label>
-
-  <br/>
+  <br/><br/>
   <input class="btn"  id="editbutton" type="button" value="Edit" (click)="Edit();" />
   <input class="btn" id="deletebutton" type="button" value="Delete"  (click)="Delete();" />
 </div>
