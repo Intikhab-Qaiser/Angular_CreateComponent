@@ -12,6 +12,9 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { AddbuttonComponent } from './addbutton/addbutton.component';
 import { CourselistComponent } from './courselist/courselist.component';
 import { HighlightDirective } from './appHighlight.directive';
+import { OrderByPipe } from './orderBy.pipe';
+import { DataService } from './data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,13 +27,15 @@ import { HighlightDirective } from './appHighlight.directive';
     AddbuttonComponent,
     CourselistComponent,
     CourseComponent,
-    HighlightDirective
+    HighlightDirective,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

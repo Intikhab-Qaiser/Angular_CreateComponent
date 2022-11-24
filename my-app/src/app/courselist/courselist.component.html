@@ -1,4 +1,4 @@
-<div *ngFor="let item of courses; trackBy: identify">
+<div *ngFor="let item of courses | orderBy; trackBy: identify">
   <br><br>
   <app-course [course]= item (delete)="DeleteCourse($event)"></app-course>
   <br><br>

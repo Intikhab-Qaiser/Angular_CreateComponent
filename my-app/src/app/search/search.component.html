@@ -1,2 +1,3 @@
-<input type="text" >
-<button>Search</button>
+<input type="text" id="txtSearch" #titleInput />
+
+<input type="button" class="btn" id="btnSearch" value="Search" (click)="Search(titleInput.value);" />
